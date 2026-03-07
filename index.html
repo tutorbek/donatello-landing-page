@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donatello.uz | Izhodkorlar uchun №1 Donate Platforma</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --accent: #000000; /* Minimalizm uchun qora va oq kontrast */
+            --blue-glow: #0071e3;
+            --text-main: #111111;
+            --text-secondary: #6e6e73;
+            --card-bg: rgba(255, 255, 255, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Futuristik Minimal fon */
+        .grid-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(235, 235, 235, 0.5) 1px, transparent 1px),
+                linear-gradient(90px, rgba(235, 235, 235, 0.5) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 85vh;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .badge {
+            background: #f5f5f7;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: 1px solid #e5e5e5;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: var(--blue-glow);
+            text-shadow: 0 0 20px rgba(0, 113, 227, 0.2);
+        }
+
+        p.sub-title {
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Waitlist qismi */
+        .waitlist-box {
+            background: var(--card-bg);
+            border: 1px solid #eeeeee;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            backdrop-filter: blur(20px);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1rem;
+            outline: none;
+            background: transparent;
+        }
+
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Yo'nalishlar (Chips) */
+        .tags {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+        }
+
+        .tag {
+            padding: 10px 20px;
+            border: 1px solid #eeeeee;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transition: 0.3s;
+        }
+
+        .tag:hover {
+            border-color: var(--text-main);
+            color: var(--text-main);
+        }
+
+        .low-fee {
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #34c759; /* Green for cheap/success */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            .waitlist-box { flex-direction: column; padding: 20px; }
+            button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <nav>
+        <div class="logo">DONATELLO</div>
+        <div style="font-size: 0.9rem; font-weight: 600;">Beta 2026</div>
+    </nav>
+
+    <section class="hero">
+        <div class="badge">Ijodkorlar iqtisodiyoti uchun yangi davr</div>
+        <h1>Ijodingizni <span>Monetizatsiya</span> qiling</h1>
+        <p class="sub-title">Streamerlar, blogerlar va artistlar uchun eng past komissiyali va eng tezkor donate platformasi.</p>
+
+        <div class="waitlist-box">
+            <input type="email" placeholder="Email manzilingiz...">
+            <button>Erta kirish</button>
+        </div>
+
+        <div class="low-fee">✦ ONLY 1% FEE — ENG ARZON KOMISSIYA ✦</div>
+
+        <div class="tags">
+            <span class="tag">Streamerlar</span>
+            <span class="tag">Gamerlar</span>
+            <span class="tag">Blogerlar</span>
+            <span class="tag">Artistlar</span>
+            <span class="tag">Podcasterlar</span>
+            <span class="tag">Musiqachilar</span>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Donatello.uz. Toshkent, O'zbekiston.
+    </footer>
+
+</body>
+</html>
